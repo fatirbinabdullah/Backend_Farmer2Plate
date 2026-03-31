@@ -24,7 +24,7 @@ app.include_router(order.router)
 
 @app.get("/")
 def root():
-    return {"message": "Farm2Plane (Faturi)"}
+    return {"message": "Farm2Plane (Fatir)"}
 
 # app.mount("/frontend", StaticFiles(directory="frontend", html=True), name="frontend")
 """
