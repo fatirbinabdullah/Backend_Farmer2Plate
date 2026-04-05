@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from database.db import Base, engine
-from routers import farmer, customer, admin, product, order
+from routers import farmer, customer, admin, product, order,web_maker
 
 Base.metadata.create_all(engine)
 
@@ -21,12 +21,8 @@ app.include_router(customer.router)
 app.include_router(admin.router)
 app.include_router(product.router)
 app.include_router(order.router)
+app.include_router(web_maker.router)
 
 @app.get("/")
 def root():
     return {"message": "Farm2Plane (Fatir)"}
-
-
-@app.get("/maker")
-def root():
-    return {"message": "Faysal Mahmud (https://www.linkedin.com/in/faysalmahmudsajan/)"}
