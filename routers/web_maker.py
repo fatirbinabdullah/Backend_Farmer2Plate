@@ -1,9 +1,10 @@
 from fastapi import APIRouter
+from fastapi.responses import RedirectResponse
 
 
-router = APIRouter(prefix="/farmer", tags=["Farmer"])
+router = APIRouter(prefix="/maker", tags=["Web Maker"])
 
 
-@router.get("/maker")
-def root():
-    return 'https://faysalmahmudsajan.github.io/'
+@router.get("/faysal")
+def maker_info():
+    return RedirectResponse(url="https://faysalmahmudsajan.github.io/")
