@@ -7,7 +7,7 @@ router = APIRouter(prefix="/maker", tags=["Web Maker"])
 
 @router.get("/")
 def maker_info():
-    return { "name":"Faysal Mahmud", "visit": "https://faysalmahmudsajan.github.io/" , "{\n}endpoint":"/faysal"}
+    return { "name":"Faysal Mahmud", "visit": "https://faysalmahmudsajan.github.io/" , "type":"/faysal"}
 
 
 @router.get("/faysal")
